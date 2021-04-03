@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(205, 199, 255);
+}
+
+body {
+  margin-top: 56px;
+  font-family: "Century Gothic";
+}
+
+.navbar {
+  background-color: rgb(34, 0, 49);
+  font-size: 16px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.navbar .navbar-brand {
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(205, 199, 255);
+}
+
+.navbar .nav-link {
+  color: rgb(205, 199, 255);
+}
+
+.navbar .active {
+  font-weight: bold;
+}
+
+.form-control {
+  background-color: rgb(229, 226, 255);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(229, 226, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(229, 226, 255);
+}
+
+/* .navbar-toggler .navbar-toggler-icon { */
+/* color: rgb(205, 199, 255); */
+/* background-color: brown; */
+/* } */
