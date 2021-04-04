@@ -88,42 +88,39 @@
         }
     ?>
 
-                <?php
+<?php
         require_once 'classes/feedbacks.php';
         $user1 = new feedback();
-        $user1->name = 'Череватенко Алексей';
-        $user1->email = 'mail@mail.com';
-        $user1->feedback = 'Дуже приємна аптека! Низькі ціни, швидкий зворотній зв\'язок. Дуже приємний та зрозумілий інтерфейс сайту. Замовляю тут вже не перший раз. Рекомендую!';
+        $user1->name = 'Наріман Намазов';
+        $user1->email = 'abu@mail.com';
+        $user1->feedback = 'Замовляю ліки тут не перший раз, дуже швидка відправка.';
         $user1->getInfo();
 
         $user2 = new feedback();
-        $user2->name = 'Лашина Марина';
-        $user2->email = 'marinett@gmail.com';
-        $user2->feedback = 'Дуже приємна аптека! Низькі ціни, швидкий зворотній зв\'язок. Дуже приємний та зрозумілий інтерфейс сайту. Замовляю тут вже не перший раз. Рекомендую!';
+        $user2->name = 'Антуан Скайуокер';
+        $user2->email = 'dartDad@gmail.com';
+        $user2->feedback = 'Дуже довго очікував підтвердження замовлення :(';
         $user2->getInfo();
 
         $user3 = new feedback();
-        $user3->name = 'Попов Александр';
-        $user3->email = 'popov_alex@yandex.ru';
-        $user3->feedback = 'Дуже приємна аптека! Низькі ціни, швидкий зворотній зв\'язок. Дуже приємний та зрозумілий інтерфейс сайту. Замовляю тут вже не перший раз. Рекомендую!';
+        $user3->name = 'Джакомо Фрімен';
+        $user3->email = 'speedDzhakomo@ukr.net';
+        $user3->feedback = 'Низькі ціни та все дуже швидко';
         $user3->getInfo();
 
         $user4 = clone $user1;
         $user4->getInfo();
         
        
-$admin = new feedbackAdmin('Admin','themail.ua@gmail.com','Text of the feedback!');
+        $admin = new feedbackAdmin('Admin','matrix@gmail.com','Дякуємо за позитивні відгуки та критику!');
         $admin->getInfo();
 
         
 ?>
 
             </div>
-
         </div>
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
