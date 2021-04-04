@@ -16,25 +16,22 @@
 
 <body>
 
-
     <nav class="fixed-top">
-
         <div class="row">
-            <div class="col-2 ">
-                <a href="#" class="navbar-brand">APT</a>
-            </div>
-
-            <div class="col-8">
-
-                <div class="row nested row-cols-md-3 row-cols-lg-6">
-                    <div class="col"></div>
-                    <div class="col"><a href="index.php">Головна</a></div>
-                    <div class="col"><a href="#">Захворювання та лікування</a></div>
-                    <div class="col"><a href="#">Оплата і доставка</a></div>
-                    <div class="col"><a href="feedback.php">Відгуки</a></div>
-                    <div class="col"><a href="#">Контакти</a></div>
+            <div class="col">
+                <div class="center">
+                    <a href="#" class="navbar-brand">APT</a>
                 </div>
-
+            </div>
+            <div class="col-8">
+                <div class="row nested">
+                    <!-- <div class="col"></div> -->
+                    <div class="col center"><a href="index.php" class="active">Головна</a></div>
+                    <div class="col center"><a href="#">Захворювання та лікування</a></div>
+                    <div class="col center"><a href="#">Оплата і доставка</a></div>
+                    <div class="col center"><a href="feedback.php">Відгуки</a></div>
+                    <div class="col center"><a href="#">Контакти</a></div>
+                </div>
                 <div class="row justify-content-center">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -43,28 +40,16 @@
                         <input type="text" placeholder="Пошук..." class="form-control" />
                     </div>
                 </div>
-
             </div>
-            <div class="col-2">
-
-                <a href="#" class="navbar-brand"><i class="fas fa-shopping-basket"></i></a>
-
+            <div class="col">
+                <div class="center">
+                    <a href="#" class="navbar-brand"><i class="fas fa-shopping-basket"></i></a>
+                </div>
             </div>
-
-
         </div>
         </div>
         </div>
     </nav>
-
-
-    <p style="font-size: 100px;">1111</p>
-    <p style="font-size: 100px;">1111</p>
-    <p style="font-size: 100px;">1111</p>
-    <p style="font-size: 100px;">1111</p>
-    <p style="font-size: 100px;">1111</p>
-    <p style="font-size: 100px;">1111</p>
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

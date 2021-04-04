@@ -11,28 +11,65 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Головна сторінка</title>
+    <title>Відгуки</title>
 
 </head>
 
 <body>
 
-<div class="messageForm">
+
+    <nav class="fixed-top">
+        <div class="row">
+            <div class="col">
+                <div class="center">
+                    <a href="#" class="navbar-brand">APT</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row nested">
+                    <!-- <div class="col"></div> -->
+                    <div class="col center"><a href="index.php">Головна</a></div>
+                    <div class="col center"><a href="#">Захворювання та лікування</a></div>
+                    <div class="col center"><a href="#">Оплата і доставка</a></div>
+                    <div class="col center"><a href="feedback.php" class="active">Відгуки</a></div>
+                    <div class="col center"><a href="#">Контакти</a></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Каталог</span>
+                        </div>
+                        <input type="text" placeholder="Пошук..." class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="center">
+                    <a href="#" class="navbar-brand"><i class="fas fa-shopping-basket"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+
+    <div class="messageForm">
 
         <form class="col-md-5" action="feedback.php" method="POST">
-                <label>Ваше имя:</label>
-                <input type="text" name="name" id="name" class="input"> 
-                <br/>
-                <label>Ваш e-mail:</label>
-                <input type="email" name="email" id="email" class="input">
-                <br/>
-                <label>Содержание: </label>
-                <br/>
-                <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
-                <br/>
-                <input type="submit" name="test" id="test" class="input"/>
+            <label>Ваше имя:</label>
+            <input type="text" name="name" id="name" class="input">
+            <br />
+            <label>Ваш e-mail:</label>
+            <input type="email" name="email" id="email" class="input">
+            <br />
+            <label>Содержание: </label>
+            <br />
+            <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
+            <br />
+            <input type="submit" name="test" id="test" class="input" />
         </form>
-</div>
+    </div>
 
     <?php
         require_once 'classes/feedbacks.php';
