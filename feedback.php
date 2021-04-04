@@ -59,13 +59,13 @@
                 <div class="messageForm">
 
                     <form class="col-md-5" action="feedback.php" method="POST">
-                        <label>Ім'я</label>
+                        <label class="label-form">Ім'я</label>
                         <input type="text" name="name" id="name" class="input">
                         <br />
-                        <label>E-mail:</label>
+                        <label class="label-form">E-mail:</label>
                         <input type="email" name="email" id="email" class="input">
                         <br />
-                        <label>Зміст відгуку: </label>
+                        <label class="label-form">Зміствідгуку:</label>
                         <br />
                         <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
                         <br />

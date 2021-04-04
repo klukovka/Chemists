@@ -84,6 +84,11 @@ nav .active {
   margin-right: auto;
 }
 
+.label-form {
+  width: auto;
+  height: auto;
+}
+
 #feedback {
   width: auto;
   height: auto;
