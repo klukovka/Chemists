@@ -18,65 +18,45 @@
 
 
     <nav class="fixed-top">
-        <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-2" style="color: white;">111</div>
-                <div class="col-8" style="color: white;">222</div>
-                <div class="col-2" style="color: white;">333</div>
+
+        <div class="row">
+            <div class="col-2 ">
+                <a href="#" class="navbar-brand">APT</a>
             </div>
+
+            <div class="col-8">
+
+                <div class="row nested row-cols-md-3 row-cols-lg-6">
+                    <div class="col"></div>
+                    <div class="col"><a href="index.php">Головна</a></div>
+                    <div class="col"><a href="#">Захворювання та лікування</a></div>
+                    <div class="col"><a href="#">Оплата і доставка</a></div>
+                    <div class="col"><a href="feedback.php">Відгуки</a></div>
+                    <div class="col"><a href="#">Контакти</a></div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Каталог</span>
+                        </div>
+                        <input type="text" placeholder="Пошук..." class="form-control" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+
+                <a href="#" class="navbar-brand"><i class="fas fa-shopping-basket"></i></a>
+
+            </div>
+
+
         </div>
-    </nav>
-    <!--
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="col">
-            <div class="row">
-                <div class="container">
-                    <a href="#" class="navbar-brand">APT</a>
-                    <div class="custom-toggler">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar"
-                            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse flex-row-reverse" id="navbar">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Головна<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item"><a href="#" class="nav-link">Захворювання та лікування</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Оплата і доставка</a></li>
-                            <li class="nav-item"><a href="feedback.php" class="nav-link">Відгуки</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Контакти</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">
-                                    <p></p>
-                                    <h2><i class="fas fa-shopping-basket"></i></h2>
-                                    <p>Кошик</p>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="col-10">
-                    <div class="container">
-                        <form class="form-inline">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Каталог</span>
-                                </div>
-                                <input type="text" placeholder="Пошук..." class="form-control">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-            </div>
+        </div>
         </div>
     </nav>
 
--->
 
     <p style="font-size: 100px;">1111</p>
     <p style="font-size: 100px;">1111</p>
