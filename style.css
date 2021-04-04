@@ -54,11 +54,11 @@ nav .active {
   }
 
 .admin-comment {
-  color:#000;
+  color:rgb(34, 0, 49);
 }
 
 .client-comment {
-  color:#888888;
+  color:rgb(184, 176, 255);
 }
 /* .navbar-toggler .navbar-toggler-icon { */
 /* color: rgb(205, 199, 255); */
