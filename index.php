@@ -34,7 +34,7 @@
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">Захворювання та лікування</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Оплата і доставка</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Відгуки</a></li>
+                            <li class="nav-item"><a href="feedback.php" class="nav-link">Відгуки</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Контакти</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">
                                     <p></p>
