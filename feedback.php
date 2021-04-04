@@ -1,46 +1,25 @@
-<?php class feedback
-{
-    private $name;
-    private $email;
-    private $feedback;
+<!DOCTYPE html>
+<html>
 
-    public function __construct()
-    {
-        $this->name = 'Користувач';
-        $this->email = 'email@mail';
-        $this->feedback = 'Відгук';
-    }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-    public function __clone()
-    {
-        $this->name = 'Користувач';
-        $this->email = 'email';
-        $this->feedback = 'Відгук';
-    }
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Головна сторінка</title>
+</head>
 
-    public function __set($name, $value)
-    {
-        $this->$name = $value;
-    }
+<body>
 
-    public function __get($name)
-    {
-        return $this->$name;
-    }
-    
 
-    public function getInfo()
-    {
-        echo "<div class=\"feedback\">
-            <h5>$this->name</h5>
-            <p>
-                $this->feedback
-            </p>
-            </div>";
-    }
-}
 
-        require_once 'feedback.php';
+    <?php
+        require_once 'classes/feedbacks.php';
         $user1 = new feedback();
         $user1->name = 'Череватенко Алексей';
         $user1->email = 'mail@mail.com';
@@ -62,31 +41,25 @@
         $user4 = clone $user1;
         $user4->getInfo();
         
-        class feedbackAdmin extends feedback
-{
-    public $admin;
-
-    public function __construct($nick, $mail,$mess)
-    {
-        $this->admin = "Адміністратор";
-        $this->name = $nick;
-        $this->email = $mail;
-        $this->feedback = $mess;
-    }
-
-    public function getInfo()
-    {
-        echo "<div class=\"feedback\">
-            <h5>$this->name ($this->admin)</h5>
-            <p>
-                $this->feedback
-            </p>
-            </div>";
-    }
-}
-
+       
 $admin = new feedbackAdmin('Admin','themail.ua@gmail.com','Text of the feedback!');
         $admin->getInfo();
 
         
 ?>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
