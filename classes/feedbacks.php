@@ -33,7 +33,7 @@ class feedback
     public function getInfo()
     {
         echo "<div class=\"feedback\">
-            <h5 class=\"client-comment\">$this->name</h5>
+            <h5 class=\"client-сomment\">$this->name</h5>
             <p>
                 $this->feedback
             </p>

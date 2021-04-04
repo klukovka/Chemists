@@ -17,7 +17,33 @@
 
 <body>
 
+<div class="messageForm">
 
+        <form class="col-md-5" action="feedback.php" method="POST">
+                <label>Ваше имя:</label>
+                <input type="text" name="name" id="name" class="input"> 
+                <br/>
+                <label>Ваш e-mail:</label>
+                <input type="email" name="email" id="email" class="input">
+                <br/>
+                <label>Содержание: </label>
+                <br/>
+                <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
+                <br/>
+                <input type="submit" name="test" id="test" class="input"/>
+        </form>
+</div>
+
+    <?php
+        require_once 'classes/feedbacks.php';
+        if(array_key_exists('test',$_POST)){
+            $new_feedback = new feedback();
+            $new_feedback->name = $_POST['name'];
+            $new_feedback->email = $_POST['email'];
+            $new_feedback->feedback =  $_POST['feedback'];
+            $new_feedback->getInfo();
+        }
+    ?>
 
     <?php
         require_once 'classes/feedbacks.php';
