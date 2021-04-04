@@ -19,10 +19,10 @@
 
     <nav class="fixed-top">
         <div class="container">
-            <div class="row">
-                <div class="col-2">111</div>
-                <div class="col-8">222</div>
-                <div class="col-2">333</div>
+            <div class="row justify-content-around">
+                <div class="col-2" style="color: white;">111</div>
+                <div class="col-8" style="color: white;">222</div>
+                <div class="col-2" style="color: white;">333</div>
             </div>
         </div>
     </nav>
