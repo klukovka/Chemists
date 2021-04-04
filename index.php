@@ -16,6 +16,17 @@
 
 <body>
 
+
+    <nav class="fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">111</div>
+                <div class="col-8">222</div>
+                <div class="col-2">333</div>
+            </div>
+        </div>
+    </nav>
+    <!--
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="col">
             <div class="row">
@@ -36,6 +47,7 @@
                             <li class="nav-item"><a href="#" class="nav-link">Оплата і доставка</a></li>
                             <li class="nav-item"><a href="feedback.php" class="nav-link">Відгуки</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Контакти</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"></a></li>
                             <li class="nav-item"><a href="#" class="nav-link">
                                     <p></p>
                                     <h2><i class="fas fa-shopping-basket"></i></h2>
@@ -64,8 +76,14 @@
         </div>
     </nav>
 
+-->
 
-
+    <p style="font-size: 100px;">1111</p>
+    <p style="font-size: 100px;">1111</p>
+    <p style="font-size: 100px;">1111</p>
+    <p style="font-size: 100px;">1111</p>
+    <p style="font-size: 100px;">1111</p>
+    <p style="font-size: 100px;">1111</p>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
