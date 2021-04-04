@@ -40,7 +40,7 @@
     }
 }
 
-        require_once 'classes/feedback.php';
+        require_once 'feedback.php';
         $user1 = new feedback();
         $user1->name = 'Череватенко Алексей';
         $user1->email = 'mail@mail.com';
