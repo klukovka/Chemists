@@ -53,25 +53,31 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="messageForm">
 
-    <div class="messageForm">
+                    <form class="col-md-5" action="feedback.php" method="POST">
+                        <label>Ваше имя:</label>
+                        <input type="text" name="name" id="name" class="input">
+                        <br />
+                        <label>Ваш e-mail:</label>
+                        <input type="email" name="email" id="email" class="input">
+                        <br />
+                        <label>Содержание: </label>
+                        <br />
+                        <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
+                        <br />
+                        <input type="submit" name="test" id="test" class="input" />
+                    </form>
+                </div>
 
-        <form class="col-md-5" action="feedback.php" method="POST">
-            <label>Ваше имя:</label>
-            <input type="text" name="name" id="name" class="input">
-            <br />
-            <label>Ваш e-mail:</label>
-            <input type="email" name="email" id="email" class="input">
-            <br />
-            <label>Содержание: </label>
-            <br />
-            <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
-            <br />
-            <input type="submit" name="test" id="test" class="input" />
-        </form>
-    </div>
+            </div>
+            <div class="col-6">
 
-    <?php
+
+                <?php
         require_once 'classes/feedbacks.php';
         if(array_key_exists('test',$_POST)){
             $new_feedback = new feedback();
@@ -82,7 +88,7 @@
         }
     ?>
 
-    <?php
+                <?php
         require_once 'classes/feedbacks.php';
         $user1 = new feedback();
         $user1->name = 'Череватенко Алексей';
@@ -112,6 +118,10 @@ $admin = new feedbackAdmin('Admin','themail.ua@gmail.com','Text of the feedback!
         
 ?>
 
+            </div>
+
+        </div>
+    </div>
 
 
 
