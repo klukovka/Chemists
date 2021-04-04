@@ -42,6 +42,24 @@ body {
   border-color: rgb(229, 226, 255);
 }
 
+.feedback {
+  width: auto;	height: auto; /* Размеры */
+  background: #ffffff; /* Цвет фона */
+  border: 1px solid #c2c2c2; /* Белая рамка */
+  border-radius: 15px; /* Радиус границы */
+  box-shadow: 2px 2px 5px rgb(189, 189, 189); /* Тень блока комментария */
+  margin: 10px; /* Отступ между блоками */
+  padding-left: 20px; /* Отступ текста внутри слева */
+  padding-top: 10px; /* Отступ текста внутри сверху */
+  }
+
+.admin-comment {
+  color:#000;
+}
+
+.client-comment {
+  color:#888888;
+}
 /* .navbar-toggler .navbar-toggler-icon { */
 /* color: rgb(205, 199, 255); */
 /* background-color: brown; */
