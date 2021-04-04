@@ -55,7 +55,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <div class="messageForm">
 
                     <form class="col-md-5" action="feedback.php" method="POST">
@@ -74,7 +74,7 @@
                 </div>
 
             </div>
-            <div class="col-6">
+            <div class="col-8">
 
 
                 <?php
