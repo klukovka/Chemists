@@ -53,13 +53,43 @@ nav .active {
   padding-top: 10px; /* Отступ текста внутри сверху */
   }
 
-.admin-comment {
+.admin-comment{
   color:rgb(34, 0, 49);
 }
 
-.client-comment {
+.client-сomment {
   color:rgb(184, 176, 255);
 }
+
+.messageForm {
+  width:fit-content;	height: auto; /* Размеры */
+  background: #ffffff; /* Цвет фона */
+  border: 1px solid #c2c2c2; /* Белая рамка */
+  border-radius: 15px; /* Радиус границы */
+  box-shadow: 2px 2px 5px rgb(189, 189, 189); /* Тень блока комментария */
+  margin: 10px; /* Отступ между блоками */
+  padding-left: 20px; /* Отступ текста внутри слева */
+  padding-top: 10px; /* Отступ текста внутри сверху */
+  padding-bottom: 10px; /* Отступ текста внутри снизу */
+  text-align: center;
+}
+
+.input {
+  width:auto;	height: auto;
+  background: #ffffff; /* Цвет фона */
+  border: 1px solid #c2c2c2; /* Белая рамка */
+  border-radius: 15px; /* Радиус границы */
+  box-shadow: 2px 2px 5px rgb(189, 189, 189); /* Тень блока */
+  margin: 10px; /* Отступ между блоками */
+  padding-left: 5px; /* Отступ текста внутри слева */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#feedback {
+  width:100%;	height: 100%;
+}
+
 /* .navbar-toggler .navbar-toggler-icon { */
 /* color: rgb(205, 199, 255); */
 /* background-color: brown; */
