@@ -46,6 +46,8 @@
             <div class="col">
                 <div class="center">
                     <a href="basket" class="navbar-brand active"><i class="fas fa-shopping-basket"></i></a>
+                    <span class="badge badge-light badge-pill">
+                        1</span>
                 </div>
             </div>
         </div>

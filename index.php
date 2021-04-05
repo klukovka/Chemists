@@ -43,7 +43,9 @@
             </div>
             <div class="col">
                 <div class="center">
-                    <a href="basket" class="navbar-brand"><i class="fas fa-shopping-basket"></i></a>
+                    <a href="basket" class="navbar-brand"><i class="fas fa-shopping-basket">
+                        </i></a> <span class="badge badge-light badge-pill">
+                        1</span>
                 </div>
             </div>
         </div>
@@ -53,7 +55,112 @@
 
     <div class="container">
         <div class="main">
+            <div class="row justify-content-center">
+                <div class="col-3 category allpad">
+                    <ul class="list-unstyled">
+                        <li><a>Категорія 1</a></li>
+                        <li><a>Категорія 2</a></li>
+                        <li><a>Категорія 3</a></li>
+                        <li><a>Категорія 4</a></li=>
+                        <li><a>Категорія 5</a></li>
+                        <li><a>Категорія 6</a></li>
+                        <li><a>Категорія 7</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 category allpad">
+                    <div class="row nested">
+                        <div class="col-4">
+                            <a>Підкатегорія 1</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 2</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 3</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 4</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 5</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 6</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 7</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 8</a>
+                        </div>
+                        <div class="col-4">
+                            <a>Підкатегорія 9</a>
+                        </div>
 
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container allpad center" style="font-size: 20px;">Популярні товари</div>
+            </div>
+            <div class="row">
+
+                <div class="col">
+                    <div class="card">
+                        <img src="" class="card-img-top" style="height: 220px" />
+                        <div class="card-body">
+                            <h5 class="card-title">Назва</h5>
+                            <h6 class="card-subtitle">123.50 грн</h6>
+                            <p class="card-text">
+                                Опис пігулок
+                            </p>
+                            <a href="" class="btn
+                        btn-outline-primary">Придбати</a>
+                        </div>
+                        <div class="card-footer">
+                            Виробник
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="" class="card-img-top" style="height: 220px" />
+                        <div class="card-body">
+                            <h5 class="card-title">Назва</h5>
+                            <h6 class="card-subtitle">123.50 грн</h6>
+                            <p class="card-text">
+                                Опис пігулок
+                            </p>
+                            <a href="" class="btn
+                        btn-outline-primary">Придбати</a>
+                        </div>
+                        <div class="card-footer">
+                            Виробник
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="" class="card-img-top" style="height: 220px" />
+                        <div class="card-body">
+                            <h5 class="card-title">Назва</h5>
+                            <h6 class="card-subtitle">123.50 грн</h6>
+                            <p class="card-text">
+                                Опис пігулок
+                            </p>
+                            <a href="" class="btn
+                        btn-outline-primary">Придбати</a>
+                        </div>
+                        <div class="card-footer">
+                            Виробник
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
