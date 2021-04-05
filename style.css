@@ -115,3 +115,12 @@ div.container6 a {
 /* color: rgb(205, 199, 255); */
 /* background-color: brown; */
 /* } */
+
+.footer {
+  background-color: rgb(229, 167, 255);
+  color: rgb(34, 0, 49);
+}
+
+a h3 i {
+  color: rgb(34, 0, 49);
+}
