@@ -11,12 +11,10 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Відгуки</title>
-
+    <title>Захворювання та лікування</title>
 </head>
 
 <body>
-
 
     <nav class="fixed-top">
         <div class="row">
@@ -29,9 +27,10 @@
                 <div class="row nested">
                     <!-- <div class="col"></div> -->
                     <div class="col center"><a href="index.php">Головна</a></div>
-                    <div class="col center"><a href="illness_and_medicine.php">Захворювання та лікування</a></div>
+                    <div class="col center"><a href="illness_and_medicine.php" class="active">Захворювання та
+                            лікування</a></div>
                     <div class="col center"><a href="payment_and_delivery.php">Оплата і доставка</a></div>
-                    <div class="col center"><a href="feedback.php" class="active">Відгуки</a></div>
+                    <div class="col center"><a href="feedback.php">Відгуки</a></div>
                     <div class="col center"><a href="contacts.php">Контакти</a></div>
                 </div>
                 <div class="row justify-content-center">
@@ -56,74 +55,9 @@
 
     <div class="container">
         <div class="main">
-            <div class="row">
-                <div class="col-4">
-                    <div class="messageForm">
 
-                        <form class="col-md-5" action="feedback.php" method="POST">
-                            <label class="label-form">Ім'я</label>
-                            <input type="text" name="name" id="name" class="input">
-                            <br />
-                            <label class="label-form">E-mail:</label>
-                            <input type="email" name="email" id="email" class="input">
-                            <br />
-                            <label class="label-form">Відгук:</label>
-                            <br />
-                            <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
-                            <br />
-                            <input type="submit" name="test" id="test" class="input" />
-                        </form>
-                    </div>
-
-                </div>
-                <div class="col-8">
-
-
-                    <?php
-        require_once 'classes/feedbacks.php';
-        if(array_key_exists('test',$_POST)){
-            $new_feedback = new feedback();
-            $new_feedback->name = $_POST['name'];
-            $new_feedback->email = $_POST['email'];
-            $new_feedback->feedback =  $_POST['feedback'];
-            $new_feedback->getInfo();
-        }
-    ?>
-
-                    <?php
-        require_once 'classes/feedbacks.php';
-        $user1 = new feedback();
-        $user1->name = 'Наріман Намазов';
-        $user1->email = 'abu@mail.com';
-        $user1->feedback = 'Замовляю ліки тут не перший раз, дуже швидка відправка.';
-        $user1->getInfo();
-
-        $user2 = new feedback();
-        $user2->name = 'Антуан Скайуокер';
-        $user2->email = 'dartDad@gmail.com';
-        $user2->feedback = 'Дуже довго очікував підтвердження замовлення :(';
-        $user2->getInfo();
-
-        $user3 = new feedback();
-        $user3->name = 'Джакомо Фрімен';
-        $user3->email = 'speedDzhakomo@ukr.net';
-        $user3->feedback = 'Низькі ціни та все дуже швидко';
-        $user3->getInfo();
-
-        $user4 = clone $user1;
-        $user4->getInfo();
-        
-       
-        $admin = new feedbackAdmin('Admin','matrix@gmail.com','Дякуємо за позитивні відгуки та критику!');
-        $admin->getInfo();
-?>
-
-                </div>
-
-            </div>
         </div>
     </div>
-
 
     <div class="footer">
         <div class="container">
@@ -156,6 +90,7 @@
             </div>
         </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
