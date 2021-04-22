@@ -62,7 +62,7 @@
                 <div class="col-4">
                     <div class="messageForm">
 
-                        <form class="col-md-5" action="feedback.php" method="POST">
+                        <form class="col-md-5" action="addToDb.php" method="POST">
                             <label class="label-form">Ім'я</label>
                             <input type="text" name="name" id="name" class="input">
                             <br />
