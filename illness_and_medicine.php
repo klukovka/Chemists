@@ -16,44 +16,10 @@
 
 <body>
 
-    <nav class="fixed-top">
-        <div class="row">
-            <div class="col">
-                <div class="center">
-                    <a href="#" class="navbar-brand">APT</a>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="row nested">
-                    <!-- <div class="col"></div> -->
-                    <div class="col center"><a href="index.php">Головна</a></div>
-                    <div class="col center"><a href="illness_and_medicine.php" class="active">Захворювання та
-                            лікування</a></div>
-                    <div class="col center"><a href="payment_and_delivery.php">Оплата і доставка</a></div>
-                    <div class="col center"><a href="feedback.php">Відгуки</a></div>
-                    <div class="col center"><a href="contacts.php">Контакти</a></div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Каталог</span>
-                        </div>
-                        <input type="text" placeholder="Пошук..." class="form-control" />
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="center">
-                    <a href="basket" class="navbar-brand"><i class="fas fa-shopping-basket"></i></a>
-                    <span class="badge badge-light badge-pill">
-                        1</span>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-    </nav>
-
+    <?php 
+include("navbar.php");
+createNavbar(">Захворювання");
+?>
 
     <div class="container">
         <div class="main">

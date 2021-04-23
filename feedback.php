@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <?php include_once('addToDb.php'); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -18,52 +19,25 @@
 <body>
 
 
-    <nav class="fixed-top">
-        <div class="row">
-            <div class="col">
-                <div class="center">
-                    <a href="#" class="navbar-brand">APT</a>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="row nested">
-                    <!-- <div class="col"></div> -->
-                    <div class="col center"><a href="index.php">Головна</a></div>
-                    <div class="col center"><a href="illness_and_medicine.php">Захворювання та лікування</a></div>
-                    <div class="col center"><a href="payment_and_delivery.php">Оплата і доставка</a></div>
-                    <div class="col center"><a href="feedback.php" class="active">Відгуки</a></div>
-                    <div class="col center"><a href="contacts.php">Контакти</a></div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Каталог</span>
-                        </div>
-                        <input type="text" placeholder="Пошук..." class="form-control" />
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="center">
-                    <a href="basket" class="navbar-brand"><i class="fas fa-shopping-basket"></i></a>
-                    <span class="badge badge-light badge-pill">
-                        1</span>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-    </nav>
+    <?php 
+include("navbar.php");
+createNavbar(">Відгуки");
+?>
+    <?php 
+    $db = new SQLite3("chemists.db");
+    $db->enableExceptions(true);
 
-
+require_once 'classes/feedbacks.php';
+echo'
     <div class="container">
         <div class="main">
             <div class="row">
                 <div class="col-4">
                     <div class="messageForm">
 
-                        <form class="col-md-5" action="addToDb.php" method="POST">
-                            <label class="label-form">Ім'я</label>
+
+  <form class="col-md-5"  method="POST">
+                            <label class="label-form">Ім\'я</label>
                             <input type="text" name="name" id="name" class="input">
                             <br />
                             <label class="label-form">E-mail:</label>
@@ -73,16 +47,12 @@
                             <br />
                             <textarea rows="5" cols="20" name="feedback" id="feedback" class="input"></textarea>
                             <br />
-                            <input type="submit" name="test" id="test" class="input" />
+                            <input type="submit" name="submit" id="submit" class="input" />
                         </form>
                     </div>
-
                 </div>
-                <div class="col-8">
-
-
-                    <?php
-        require_once 'classes/feedbacks.php';
+                <div class="col-8"> ';
+                
         if(array_key_exists('test',$_POST)){
             $new_feedback = new feedback();
             $new_feedback->name = $_POST['name'];
@@ -90,11 +60,40 @@
             $new_feedback->feedback =  $_POST['feedback'];
             $new_feedback->getInfo();
         }
-    ?>
+      
 
-                    <?php
-        require_once 'classes/feedbacks.php';
-        $user1 = new feedback();
+        
+    function getAllFeedbacks($db, $table){        
+        $select = "SELECT * FROM $table";
+        $result = $db->query($select);
+        $array = array();
+
+        while($data = $result->fetchArray(SQLITE3_ASSOC))
+        {
+            $array[] = $data;
+        }
+        for($i=0; $i<count($array);$i++){
+           $position = stripos($array[$i]['uEmail'], "admin");
+
+          if($position===0){
+        $admin = new feedbackAdmin($array[$i]['uName'],
+        $array[$i]['uEmail'],$array[$i]['uMessage']);
+        $admin->getInfo();           
+          } else{
+        $user = new feedback();
+        $user->name = $array[$i]['uName'];
+        $user->email = $array[$i]['uEmail'];
+        $user->feedback = $array[$i]['uMessage'];
+        $user->getInfo();
+          }          
+           
+        }          
+    }
+
+    getAllFeedbacks($db, "feedback");
+
+      
+      /*$user1 = new feedback();
         $user1->name = 'Наріман Намазов';
         $user1->email = 'abu@mail.com';
         $user1->feedback = 'Замовляю ліки тут не перший раз, дуже швидка відправка.';
@@ -117,15 +116,16 @@
         
        
         $admin = new feedbackAdmin('Admin','matrix@gmail.com','Дякуємо за позитивні відгуки та критику!');
-        $admin->getInfo();
-?>
+        $admin->getInfo(); */
 
+echo'
+                    </div>
                 </div>
-
             </div>
         </div>
-    </div>
+';
 
+?>
 
     <div class="footer">
         <div class="container">

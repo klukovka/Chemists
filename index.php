@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <?php include_once('database.php'); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -17,108 +18,9 @@
 <body>
 
     <?php 
-if(!file_exists("chemists.db")){
-$db = new SQLite3("chemists.db");
-$db->enableExceptions(true);
-
-$sql = "CREATE TABLE feedback (
-    id_feedback INTEGER PRIMARY KEY AUTOINCREMENT,
-    uName TEXT NOT NULL, 
-    uEmail TEXT NOT NULL, 
-    uMessage TEXT NOT NULL)";
-$db->query($sql);
-
-$sql = "CREATE TABLE cathegory (
-    id_category INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL)";
-$db->query($sql);
-
-
-$sql = "CREATE TABLE subcathegory (
-    id_subcategory INTEGER PRIMARY KEY AUTOINCREMENT,
-    id_category INTEGER NOT NULL,
-    title TEXT NOT NULL,
-     FOREIGN KEY (id_category)
-       REFERENCES cathegory (id_category) )";
-$db->query($sql);
-
-$sql = "CREATE TABLE product (
-    id_product INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL, 
-    _description TEXT NOT NULL, 
-    price TEXT NOT NULL,
-    manufacturer TEXT NOT NULL,
-    _image TEXT NOT NULL,
-    id_subcategory INTEGER NOT NULL,
-     FOREIGN KEY (id_subcategory)
-       REFERENCES subcathegory (id_subcategory) 
-    )";
-$db->query($sql);
-
-$sql = "CREATE TABLE purchase (
-    id_purchase INTEGER PRIMARY KEY AUTOINCREMENT,
-    _name TEXT NOT NULL, 
-    home_address TEXT NOT NULL,
-    telephone TEXT NOT NULL, 
-    _message TEXT NOT NULL,
-    email TEXT NOT NULL
-    )";
-$db->query($sql);
-
-$sql = "CREATE TABLE product_puschase (
-    id_product_purchase INTEGER PRIMARY KEY AUTOINCREMENT,
-    id_purchase INTEGER NOT NULL,
-    id_product INTEGER NOT NULL ,
-    amount INTEGER NOT NULL,
-     FOREIGN KEY (id_purchase)
-       REFERENCES purchase (id_purchase),
-       FOREIGN KEY (id_product)
-       REFERENCES product (id_product))";
-$db->query($sql);
-}
-else{
-$db = new SQLite3("chemists.db");
-
-}
+include("navbar.php");
+createNavbar(">Головна");
 ?>
-
-
-    <nav class="fixed-top">
-        <div class="row">
-            <div class="col">
-                <div class="center">
-                    <a href="#" class="navbar-brand">APT</a>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="row nested">
-                    <!-- <div class="col"></div> -->
-                    <div class="col center"><a href="index.php" class="active">Головна</a></div>
-                    <div class="col center"><a href="illness_and_medicine.php">Захворювання та лікування</a></div>
-                    <div class="col center"><a href="payment_and_delivery.php">Оплата і доставка</a></div>
-                    <div class="col center"><a href="feedback.php">Відгуки</a></div>
-                    <div class="col center"><a href="contacts.php">Контакти</a></div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Каталог</span>
-                        </div>
-                        <input type="text" placeholder="Пошук..." class="form-control" />
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="center">
-                    <a href="basket" class="navbar-brand"><i class="fas fa-shopping-basket">
-                        </i></a> <span class="badge badge-light badge-pill">
-                        1</span>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-    </nav>
 
     <div class="container">
         <div class="main">

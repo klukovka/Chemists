@@ -8,7 +8,7 @@ class feedback
     public function __construct()
     {
         $this->name = 'Користувач';
-        $this->email = 'email@mail';
+        $this->email = 'email@gmail.com';
         $this->feedback = 'Відгук';
     }
 
