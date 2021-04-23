@@ -2,9 +2,6 @@
 
 require_once 'classes/feedbacks.php';
 
-
-function addToBase(){
-
 $correct = true;
 
 $db = new SQLite3('chemists.db');
@@ -52,7 +49,4 @@ finally
     }
 }
 
-}
-
-addToBase();
 ?>

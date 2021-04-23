@@ -36,7 +36,7 @@ echo'
                     <div class="messageForm">
 
 
-  <form class="col-md-5"  method="POST">
+  <form class="col-md-5" method="POST">
                             <label class="label-form">Ім\'я</label>
                             <input type="text" name="name" id="name" class="input">
                             <br />
@@ -53,16 +53,7 @@ echo'
                 </div>
                 <div class="col-8"> ';
                 
-        if(array_key_exists('test',$_POST)){
-            $new_feedback = new feedback();
-            $new_feedback->name = $_POST['name'];
-            $new_feedback->email = $_POST['email'];
-            $new_feedback->feedback =  $_POST['feedback'];
-            $new_feedback->getInfo();
-        }
-      
-
-        
+    
     function getAllFeedbacks($db, $table){        
         $select = "SELECT * FROM $table";
         $result = $db->query($select);
@@ -89,6 +80,8 @@ echo'
            
         }          
     }
+
+    
 
     getAllFeedbacks($db, "feedback");
 
@@ -126,6 +119,7 @@ echo'
 ';
 
 ?>
+
 
     < <?php 
  include("footer.php");

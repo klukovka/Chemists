@@ -1,5 +1,7 @@
 <?php 
-function createNavbar($item){
+function createNavbar($item, $search = ""){
+
+
 
 $values = '
  <div class="col center"><a href="index.php" >Головна</a></div>
@@ -30,8 +32,11 @@ $items = str_replace($item, $active, $values);
                         <div class="input-group-prepend">
                             <span class="input-group-text">Каталог</span>
                         </div>
-                        <input type="text" placeholder="Пошук..." class="form-control" />
-                    </div>
+                        <input type="text" placeholder="Пошук..." class="form-control"';
+        echo "
+        value=\"$search\"/>
+        ";
+            echo '          </div>
                 </div>
             </div>
             <div class="col">
