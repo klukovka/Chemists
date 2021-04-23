@@ -8,8 +8,10 @@ $values = '
                     <div class="col center"><a href="feedback.php" >Відгуки</a></div>
                     <div class="col center"><a href="contacts.php" >Контакти</a></div>
 ';
+
 $active="class=\"active\"$item";
 $items = str_replace($item, $active, $values);
+
 
     echo '    
      <nav class="fixed-top">
@@ -34,7 +36,7 @@ $items = str_replace($item, $active, $values);
             </div>
             <div class="col">
                 <div class="center">
-                    <a href="basket" class="navbar-brand"><i class="fas fa-shopping-basket">
+                    <a href="basket.php" class="navbar-brand"><i class="fas fa-shopping-basket">
                         </i></a> <span class="badge badge-light badge-pill">
                         1</span>
                 </div>
