@@ -84,33 +84,7 @@ echo'
     
 
     getAllFeedbacks($db, "feedback");
-
-      
-      /*$user1 = new feedback();
-        $user1->name = 'Наріман Намазов';
-        $user1->email = 'abu@mail.com';
-        $user1->feedback = 'Замовляю ліки тут не перший раз, дуже швидка відправка.';
-        $user1->getInfo();
-
-        $user2 = new feedback();
-        $user2->name = 'Антуан Скайуокер';
-        $user2->email = 'dartDad@gmail.com';
-        $user2->feedback = 'Дуже довго очікував підтвердження замовлення :(';
-        $user2->getInfo();
-
-        $user3 = new feedback();
-        $user3->name = 'Джакомо Фрімен';
-        $user3->email = 'speedDzhakomo@ukr.net';
-        $user3->feedback = 'Низькі ціни та все дуже швидко';
-        $user3->getInfo();
-
-        $user4 = clone $user1;
-        $user4->getInfo();
-        
-       
-        $admin = new feedbackAdmin('Admin','matrix@gmail.com','Дякуємо за позитивні відгуки та критику!');
-        $admin->getInfo(); */
-
+    
 echo'
                     </div>
                 </div>
