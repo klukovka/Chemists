@@ -1,0 +1,14 @@
+{
+    "name": "yuliia_danylo/chemists",
+    "type": "project",
+    "require": {
+        "ext-sqlite3": "^8.0",
+        "ext-pdo_sqlite": "^8.0"
+    },
+    "authors": [
+        {
+            "name": "klukovka",
+            "email": "yuliia.koba@nure.ua"
+        }
+    ]
+}
